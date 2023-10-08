@@ -113,20 +113,47 @@ header {
         opacity: 1;
     }
 }
-/* ... (previous CSS rules) ... */
 
-/* Style for the friends' photo */
+/* Style for the friends' photo card */
+.friends-card {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    max-height: 75vh; /* Set a maximum height relative to the viewport height */
+}
+
 .friends-card .photo-frame {
     max-width: 100%; /* Allow it to resize proportionally */
+    max-height: 100%; /* Constrain the image's height within the card */
     margin: 0 auto;
     overflow: hidden;
     border-radius: 20px;
 }
 
 .friends-card .photo-frame img {
-    max-width: 100%; /* Ensure the image fits within the parent container */
+    width: 100%;
     height: auto;
     display: block;
 }
 
-/* ... (remaining CSS rules) ... */
+/* Scrolling footer styles */
+.scrolling-footer {
+    background-color: #e74c3c; /* Footer background color */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: sticky;
+    bottom: 0;
+    z-index: 100;
+}
+
+.scrolling-text {
+    overflow: hidden;
+}
+
+.scrolling-text marquee {
+    behavior: scroll;
+    direction: left;
+    scrollamount: 3;
+}
